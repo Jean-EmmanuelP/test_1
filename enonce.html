@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Enoncé du Test Technique</title>
+    <meta name="description" content="Enoncé du Test Technique" />
+    <meta name="author" content="Votre Nom" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body class="fade-out">
+    <a href="/test.html" class="logo">
+      <img
+        width="200"
+        src="https://linkaband.com/assets/images/top/lkb-full-color.png"
+        alt="Logo"
+      />
+    </a>
+    <div class="container">
+      <div class="header">
+        <h1>Enoncé du Test Technique</h1>
+      </div>
+      <div class="content">
+        <h2>Objectif de l'exercice :</h2>
+        <p>
+          L'objectif de cet exercice est de créer un générateur de badge en code
+          HTML.
+        </p>
+        <p>
+          Une fois le badge généré on peut le copier-coller et l'intégrer à
+          n'importe quelle autre page HTML.
+        </p>
+        <p>
+          Une fois intégré sur une page HTML, ce badge est une image. Voir
+          <a target="_blank" href="badge.html">ici</a>.
+        </p>
+        <h2>Fonctionnement du générateur :</h2>
+        <p>Le générateur doit contenir un select et un bouton de validation.</p>
+        <p>
+          Le select permet de choisir un des 5 artistes pour lequel le badge est
+          généré.
+        </p>
+        <p>L'attribut <b>alt</b> est différent selon l'artiste choisi.</p>
+        <p>
+          En cliquant sur le bouton "Générer le badge", le code HTML du badge
+          apparaît en dessous.
+        </p>
+        <p>
+          Je n'ai plus qu'à copier le code du badge pour le coller dans une
+          nouvelle page HTML et voir mon image apparaître.
+        </p>
+        <h2>Définition des artistes :</h2>
+        <div class="rules">
+          <ul>
+            <li>Les 5 artistes sont définis dans le fichier variables.js.</li>
+            <li>
+              Un artiste possède un attribut nbmembres compris entre 1 et 5.
+            </li>
+            <li>Un artiste a entre 1 et 5 styles.</li>
+            <li>Un artiste a une localisation.</li>
+          </ul>
+          <h2>Construction des alt :</h2>
+          <ul>
+            <li>Le alt est une chaîne de caractères.</li>
+            <li>
+              Le premier mot est sélectionné au hasard parmi "Recherche",
+              "Devis", "Tarifs", "Prix", "Reservation", "Cherche" avec une
+              probabilité de 1/6.
+            </li>
+            <li>
+              Le deuxième mot est le type de l'artiste.<br />
+              Un artiste est un DJ s'il a le style "STYLES.DJ".<br />
+              Sinon soit c'est un groupe de musique si nbmembres > 2 sinon c'est
+              un musicien.
+            </li>
+            <li>
+              Le troisième mot est la localisation de l'artiste dans 50% des
+              cas. <br />Dans les 50% autres cas, c'est tous les styles de
+              l'artiste ajoutés à la suite.
+            </li>
+            <li>
+              <b
+                >Il est conseillé de regarder les alt des photos d'au dessus
+                pour bien comprendre la construction avant de coder.</b
+              >
+            </li>
+          </ul>
+          <h2>Remarques :</h2>
+          <ul>
+            <li>
+              Une fois le badge généré, si je clique à nouveau sur "Générer le
+              badge" le badge se met à jour avec un nouveau <b>alt</b>.
+            </li>
+            <li>
+              Après avoir généré un badge pour un certain artiste, je dois
+              pouvoir en sélectionner un autre pour générer le sien.
+            </li>
+            <li>La photo et le lien href du badge sont au choix</li>
+          </ul>
+          <h2>Consignes :</h2>
+          <ul>
+            <li>
+              Pense à bien mettre ton nom à la place de "Test Technique n°1" +
+              ajouter le temps mis pour faire l'exercice
+            </li>
+            <li>L'utilisation d'internet est autorisée</li>
+            <li>L'exercice est à faire sans aide extérieure</li>
+            <li>
+              Les critères de notations sont :<br />
+              1. Réussite de l'exercice<br />
+              2. Clarté et lisibilité du code<br />
+              3. Autonomie<br />
+              4. Temps mis pour réaliser l'exercice<br />
+              5. Bonus important: Un design sympa sera grandement apprécié
+              (fichier style.css)<br />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

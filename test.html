@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test Technique n°1 - Jean-Emmanuel Perramant</title>
+    <meta name="description" content="Test Technique n°1" />
+    <meta name="author" content="Jean-Emmanuel Perramant" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="variables.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body class="fade-out">
+    <a class="logo">
+      <img
+        width="200"
+        src="https://linkaband.com/assets/images/top/lkb-full-color.png"
+        alt="Logo"
+      />
+    </a>
+    <div class="container">
+      <div class="header">
+        <h1>Test Technique n°1 </br>  <a href="https://www.linkedin.com/in/jean-emmanuel-perramant/" target="_blank" class="author">Jean-Emmanuel Perramant</a></h1>
+        <p><a href="enonce.html" class="btn">Voir l'énoncé du test</a></p>
+      </div>
+      <div>
+        <div class="form-group">
+          <select id="artisteType" class="custom-select">
+            <option selected>Artiste n°1</option>
+            <option>Artiste n°2</option>
+            <option>Artiste n°3</option>
+            <option>Artiste n°4</option>
+            <option>Artiste n°5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button onclick="generateText()" type="button" class="btn">
+            Générer le badge
+          </button>
+        </div>
+      </div>
+      <div id="generatedBadgeContainer"></div>
+      <div class="form-group" id="badgePageButtonContainer"></div>
+    </div>
+  </body>
+</html>
