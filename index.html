@@ -5,9 +5,14 @@
     <title>Test Technique n°1 - Jean-Emmanuel Perramant</title>
     <meta name="description" content="Test Technique n°1" />
     <meta name="author" content="Jean-Emmanuel Perramant" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="variables.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/music_player.css" />
+    <script type="text/javascript" src="/script/variables.js"></script>
+    <script type="text/javascript" src="/script/script.js"></script>
+    <script type="text/javascript" src="/script/music_player.js" defer></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
 </head>
 <body class="fade-out">
 <a class="logo">
@@ -41,5 +46,36 @@
     <div id="generatedBadgeContainer"></div>
     <div class="form-group" id="badgePageButtonContainer"></div>
 </div>
+
+<!-- Music Player HTML Structure -->
+<div class="music-player-container hide">
+    <div class="toggle-player">
+        <ion-icon name="add-outline"></ion-icon>
+    </div>
+    <div class="avatar">
+        <img src="/assets/img/music_icon.png" width="20" height="20" />
+    </div>
+    <div class="player">
+        <div class="sound-bars-lottie">
+            <div class="sound-bars"></div>
+        </div>
+        <div class="track-info">
+            <div class="track-name">Track Name</div>
+            <div class="track-artist">Track Artist</div>
+        </div>
+        <div class="track-nav">
+            <div class="prev-track" onclick="prevTrack()">
+                <ion-icon name="play-back-sharp"></ion-icon>
+            </div>
+            <div class="playpause-track" onclick="playPauseTrack()">
+                <ion-icon name="play-sharp"></ion-icon>
+            </div>
+            <div class="next-track" onclick="nextTrack()">
+                <ion-icon name="play-forward-sharp"></ion-icon>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
