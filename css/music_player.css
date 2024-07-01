@@ -1,6 +1,6 @@
 .music-player-container {
     position: absolute;
-    bottom: 4rem;
+    bottom: 1rem;
     left: 4rem;
     width: 480px;
     transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);

@@ -1,12 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <title>Badge Généré</title>
   <meta name="description" content="Badge Généré">
   <meta name="author" content="Votre Nom">
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
   <link rel="stylesheet" href="/css/style.css">
-  <script type="text/javascript" src="/script/script.js"></script>
+  <script type="text/javascript" src="/script/variables.js"></script>
+  <script type="text/javascript" src="/script/script.js" defer></script>
 </head>
 <body class="fade-out">
   <a href="/index.html" class="logo">
@@ -17,13 +22,18 @@
     />
   </a>
   <div class="container">
+    <a href="/index.html">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/93/93634.png"
+        width="20"
+        alt=""
+      />
+    </a>
     <div class="header">
       <h1>Badge Généré</h1>
     </div>
     <div class="content">
-      <div class="">
-        <img src="https://www.gstatic.com/webp/gallery/1.jpg" alt="Badge Image" style="width: 130px; height: 130px;">
-      </div>
+      <div id="badgeContainer"></div>
     </div>
   </div>
 </body>
