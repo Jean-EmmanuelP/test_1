@@ -1,3 +1,45 @@
+@font-face {
+  font-family: "SKCuriosity";
+  src: url("fonts/skCuriosity/SKCuriosity-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SKCuriosity";
+  src: url("fonts/skCuriosity/SKCuriosity-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SKCuriosity";
+  src: url("fonts/skCuriosity/SKCuriosity-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SKCuriosity";
+  src: url("fonts/skCuriosity/SKCuriosity-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  font-family: "SKCuriosity", sans-serif;
+}
+
+h1 {
+  font-family: "SKCuriosity", sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: "SKCuriosity", sans-serif;
+  font-style: italic;
+}
+
 body.fade-out {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -12,16 +54,43 @@ body {
   position: relative;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-  font-family: "Arial", sans-serif;
-  background-color: rgba(249, 183, 50, 0.6);
+  background: linear-gradient(
+    to bottom right,
+    rgba(249, 183, 50, 0.6),
+    rgba(249, 183, 50, 1) 50%
+  );
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff6f54 1%, #f9b732 50%, #ff6f54 97%);
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+  z-index: -2;
+}
 .container {
   background-color: #fff;
   padding: 20px 40px;
@@ -86,7 +155,7 @@ ul li {
 }
 
 .btn {
-  background-color: #FF6F54;
+  background-color: #ff6f54;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -107,14 +176,15 @@ ul li {
 }
 
 .btn:hover {
-  background-color: #E65B45;
+  background-color: #e65b45;
 }
 
 .form-group {
   margin: 20px 0;
 }
 
-select, button {
+select,
+button {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -148,26 +218,20 @@ pre {
   width: 100%;
   padding: 10px;
   font-size: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid gray;
   border-radius: 5px;
   background-color: #fff;
   color: #333;
-  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns="http://www.w3.org/2000/svg"%20viewBox="0%200%204%205"><path%20fill="%23FF6F54"%20d="M2%200L0%202h4zm0%205L0%203h4z"/></svg>');
+  background-repeat: no-repeat, repeat;
+  background-position: right 10px top 50%, 0 0;
+  background-size: 8px auto, 100%;
 }
 
 .custom-select:focus {
-  border-color: #FF6F54;
   outline: none;
-  box-shadow: 0 0 5px rgba(255, 111, 84, 0.5);
-}
-
-#loading-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 20px;
-  background-color: black;
-  z-index: 9999;
-  transition: width 0.4s ease-out;
+  border-color: #e65b45;
 }
